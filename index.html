@@ -2,89 +2,162 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Daniil Stoljar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daniil Stoljar | Portfolio</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+
     <link rel="stylesheet" href="styles.css" />
-    <script
-      src="https://kit.fontawesome.com/yourkit.js"
-      crossorigin="anonymous"
-    ></script>
+    <meta name="color-scheme" content="light dark" />
   </head>
+  <body>
+    <a class="skip-link" href="#about">Skip to content</a>
 
-  <header class="me">
-    <div class="container">
-      <h1>Hi, my name is Daniil Stoljar</h1>
-      <p>Front-End Developer and Tallin University Student</p>
-      <a href="@contact" class="button">Contact Me</a>
-    </div>
-  </header>
+    <nav class="navbar" aria-label="Primary">
+      <div class="container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
 
-  <section id="about" class="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        I'm a Computer Science student at Tallinn University,
-        (PLACEHOLDER)(passionate about creating intuitive web interfaces using
-        HTML, CSS, and JavaScript).(PLACEHOLDER HERE) My background in the
-        Estonian Defence Forces as a medevac team member has instilled in me
-        resilience and teamwork.
-      </p>
-    </div>
-  </section>
-  <section id="skills" class="skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <ul class="skills-list">
-        <li><i class="fab fa-html5"></i> HTML5</li>
-        <li><i class="fab fa-css3-alt"></i> CSS3</li>
-        <li><i class="fab fa-js-square"></i> JavaScript (ES6+)</li>
-        <li><i class="fab fa-react"></i> React & Next.js</li>
-        <li><i class="fab fa-git-alt"></i> Git & GitHub</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project-card">
-        <h3>Forum for book worms with Next.js and Supabase</h3>
-        <p>
-          A functioning discussion forum for book-lovers created with Next.js
-          and Supabase
-        </p>
-        <!-- <a href=""></a> -->
-      </div>
-    </div>
-  </section>
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>Feel free to reach out!</p>
-      <li>
-        <i class="fas fa-envelope"></i>
-        <a href="mailto:daniil.stoljar@gmail.com">daniil.stoljar@gmail.com</a>
-      </li>
-      <li>
-        <i class="fab fa-linkedin"></i>
-        <a
-          href="https://www.linkedin.com/in/daniil-stoljar-47b01622b/"
-          target="_blank"
-          >LinkedIn</a
+        <button
+          id="theme-toggle"
+          type="button"
+          aria-pressed="false"
+          aria-label="Toggle dark mode"
         >
-      </li>
-      <li>
-        <i class="fab fa-github"></i>
-        <a href="https://github.com/Daniil-Stoljar" target="_blank">GitHub</a>
-      </li>
-    </div>
-  </section>
+          <span class="theme-icon" aria-hidden="true">🌙</span>
+        </button>
+      </div>
+    </nav>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Daniil Stoljar. All rights reserved.</p>
-    </div>
-  </footer>
+    <header id="top" class="hero">
+      <div class="container">
+        <h1>Hi, my name is <span>Daniil Stoljar</span></h1>
+        <p id="typing" aria-live="polite">Front-End Developer</p>
+        <a href="#contact" class="button">Contact Me</a>
+      </div>
+    </header>
 
-  <script src="script.js"></script>
+    <main>
+      <section id="about" class="about fade-in section">
+        <div class="container">
+          <h2>About Me</h2>
+          <p>
+            I’m a Computer Science student at Tallinn University, passionate
+            about building modern web apps with
+            <strong>HTML, CSS, and JavaScript</strong>. My experience in the
+            Estonian Defence Forces as a medevac team member sharpened my
+            resilience, teamwork, and problem-solving.
+          </p>
+        </div>
+      </section>
+
+      <section id="skills" class="skills fade-in section">
+        <div class="container">
+          <h2>Skills</h2>
+          <ul class="skills-list" aria-label="Tech stack">
+            <li><i class="fa-brands fa-html5" aria-hidden="true"></i> HTML5</li>
+            <li>
+              <i class="fa-brands fa-css3-alt" aria-hidden="true"></i> CSS3
+            </li>
+            <li>
+              <i class="fa-brands fa-js" aria-hidden="true"></i> JavaScript
+              (ES6+)
+            </li>
+            <li>
+              <i class="fa-brands fa-react" aria-hidden="true"></i> React &
+              Next.js
+            </li>
+            <li>
+              <i class="fa-brands fa-git-alt" aria-hidden="true"></i> Git &
+              GitHub
+            </li>
+          </ul>
+
+          <div class="skill-bar" data-skill="100"><span>HTML</span></div>
+          <div class="skill-bar" data-skill="100"><span>CSS</span></div>
+          <div class="skill-bar" data-skill="100"><span>JavaScript</span></div>
+          <div class="skill-bar" data-skill="100"><span>React</span></div>
+          <div class="skill-bar" data-skill="100"><span>Git(Hub)</span></div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects fade-in section">
+        <div class="container">
+          <h2>Projects</h2>
+
+          <article class="project-card">
+            <h3>📚 Book Forum (Next.js + Supabase)</h3>
+            <p>
+              A community discussion platform for book lovers with auth, posts,
+              and real-time updates.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <h3>🌐 Portfolio Website</h3>
+            <p>
+              This site—built with semantic HTML, modern CSS, and progressive
+              enhancement in JS.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact fade-in section">
+        <div class="container">
+          <h2>Contact Me</h2>
+          <p>Let’s connect!</p>
+
+          <ul class="contact-list" role="list">
+            <li>
+              <a class="contact-item" href="mailto:daniil.stoljar@gmail.com">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <span>daniil.stoljar@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="contact-item"
+                href="https://www.linkedin.com/in/daniil-stoljar-47b01622b/"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                <span>LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="contact-item"
+                href="https://github.com/Daniil-Stoljar"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                <span>GitHub</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; <span id="year"></span> Daniil Stoljar. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
 </html>
