@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Daniil Stoljar | Portfolio</title>
+    <title>Daniil Stoljar | Front-End Developer</title>
+    <meta
+      name="description"
+      content="Playful, animated portfolio of Daniil Stoljar – Front-End Developer and Tallinn University student. Projects, skills, and contact."
+    />
+    <meta name="color-scheme" content="light dark" />
 
     <link
       rel="stylesheet"
@@ -12,14 +17,13 @@
     />
 
     <link rel="stylesheet" href="styles.css" />
-    <meta name="color-scheme" content="light dark" />
   </head>
   <body>
     <a class="skip-link" href="#about">Skip to content</a>
 
     <nav class="navbar" aria-label="Primary">
-      <div class="container">
-        <ul class="nav-links">
+      <div class="container nav-wrap">
+        <ul class="nav-links" role="list">
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -28,6 +32,7 @@
 
         <button
           id="theme-toggle"
+          class="icon-btn"
           type="button"
           aria-pressed="false"
           aria-label="Toggle dark mode"
@@ -37,32 +42,41 @@
       </div>
     </nav>
 
-    <header id="top" class="hero">
-      <div class="container">
-        <h1>Hi, my name is <span>Daniil Stoljar</span></h1>
-        <p id="typing" aria-live="polite">Front-End Developer</p>
-        <a href="#contact" class="button">Contact Me</a>
+    <header class="hero">
+      <div aria-hidden="true" class="blob blob-1"></div>
+      <div aria-hidden="true" class="blob blob-2"></div>
+
+      <div class="container hero-inner">
+        <h1>Hi, I’m <span class="grad-text">Daniil Stoljar</span></h1>
+        <p id="typing" class="typing" aria-live="polite">Front-End Developer</p>
+
+        <div class="cta-row">
+          <a href="#projects" class="button ripple">See Projects</a>
+          <a href="#contact" class="button ghost ripple">Contact Me</a>
+        </div>
       </div>
     </header>
 
     <main>
-      <section id="about" class="about fade-in section">
+      <section id="about" class="section fade-in">
         <div class="container">
           <h2>About Me</h2>
-          <p>
-            I’m a Computer Science student at Tallinn University, passionate
-            about building modern web apps with
-            <strong>HTML, CSS, and JavaScript</strong>. My experience in the
-            Estonian Defence Forces as a medevac team member sharpened my
-            resilience, teamwork, and problem-solving.
+          <p class="lead">
+            I’m a Computer Science student at Tallinn University who enjoys
+            turning ideas into delightful web experiences with
+            <strong>HTML</strong>, <strong>CSS</strong>, and
+            <strong>JavaScript</strong>. My time in the Estonian Defence Forces
+            as a medevac team member taught me resilience, teamwork, and calm
+            problem-solving — the same mindset I bring to code.
           </p>
         </div>
       </section>
 
-      <section id="skills" class="skills fade-in section">
+      <section id="skills" class="section fade-in">
         <div class="container">
           <h2>Skills</h2>
-          <ul class="skills-list" aria-label="Tech stack">
+
+          <ul class="skills-list" role="list" aria-label="Tech stack">
             <li><i class="fa-brands fa-html5" aria-hidden="true"></i> HTML5</li>
             <li>
               <i class="fa-brands fa-css3-alt" aria-hidden="true"></i> CSS3
@@ -81,51 +95,81 @@
             </li>
           </ul>
 
-          <div class="skill-bar" data-skill="100"><span>HTML</span></div>
-          <div class="skill-bar" data-skill="100"><span>CSS</span></div>
-          <div class="skill-bar" data-skill="100"><span>JavaScript</span></div>
-          <div class="skill-bar" data-skill="100"><span>React</span></div>
-          <div class="skill-bar" data-skill="100"><span>Git(Hub)</span></div>
+          <div class="skill-bars">
+            <div class="skill-bar" data-skill="100">
+              <span>HTML</span>
+            </div>
+            <div class="skill-bar" data-skill="85">
+              <span>CSS</span>
+            </div>
+            <div class="skill-bar" data-skill="78">
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-bar" data-skill="70">
+              <span>React</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="projects" class="projects fade-in section">
+      <section id="projects" class="section fade-in">
         <div class="container">
           <h2>Projects</h2>
 
-          <article class="project-card">
-            <h3>📚 Book Forum (Next.js + Supabase)</h3>
-            <p>
-              A community discussion platform for book lovers with auth, posts,
-              and real-time updates.
-            </p>
-          </article>
+          <div class="cards">
+            <article class="project-card tilt">
+              <h3>📚 Book Forum (Next.js + Supabase)</h3>
+              <p>
+                Discussion platform for book lovers with auth, posts, and live
+                updates.
+              </p>
+              <div class="links">
+                <a class="link ripple" href="#" target="_blank" rel="noopener"
+                  >Live</a
+                >
+                <a class="link ripple" href="#" target="_blank" rel="noopener"
+                  >Repo</a
+                >
+              </div>
+            </article>
 
-          <article class="project-card">
-            <h3>🌐 Portfolio Website</h3>
-            <p>
-              This site—built with semantic HTML, modern CSS, and progressive
-              enhancement in JS.
-            </p>
-          </article>
+            <article class="project-card tilt">
+              <h3>🌐 Portfolio Website</h3>
+              <p>
+                This playful, animated portfolio—built with semantic HTML,
+                modern CSS, and progressive JS.
+              </p>
+              <div class="links">
+                <a class="link ripple" href="#" target="_blank" rel="noopener"
+                  >Live</a
+                >
+                <a class="link ripple" href="#" target="_blank" rel="noopener"
+                  >Repo</a
+                >
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section id="contact" class="contact fade-in section">
+      <section id="contact" class="section fade-in contact">
         <div class="container">
-          <h2>Contact Me</h2>
-          <p>Let’s connect!</p>
+          <h2>Contact</h2>
+          <p class="lead">Let’s connect!</p>
 
           <ul class="contact-list" role="list">
             <li>
-              <a class="contact-item" href="mailto:daniil.stoljar@gmail.com">
+              <a
+                class="contact-item ripple"
+                href="mailto:daniil.stoljar@gmail.com"
+              >
                 <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                 <span>daniil.stoljar@gmail.com</span>
               </a>
             </li>
             <li>
               <a
-                class="contact-item"
+                class="contact-item ripple"
                 href="https://www.linkedin.com/in/daniil-stoljar-47b01622b/"
                 target="_blank"
                 rel="noopener"
@@ -136,7 +180,7 @@
             </li>
             <li>
               <a
-                class="contact-item"
+                class="contact-item ripple"
                 href="https://github.com/Daniil-Stoljar"
                 target="_blank"
                 rel="noopener"
@@ -157,6 +201,9 @@
         </p>
       </div>
     </footer>
+
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-outline" aria-hidden="true"></div>
 
     <script src="script.js" defer></script>
   </body>
