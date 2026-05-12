@@ -59,20 +59,6 @@
   );
   $$(".fade-in").forEach((el) => revealIO.observe(el));
 
-  const skillIO = new IntersectionObserver(
-    (entries, obs) => {
-      for (const e of entries) {
-        if (!e.isIntersecting) continue;
-        const el = e.target;
-        const pct = Math.max(0, Math.min(100, Number(el.dataset.skill) || 0));
-        el.style.setProperty("--width", pct + "%");
-        obs.unobserve(el);
-      }
-    },
-    { threshold: 0.45 }
-  );
-  $$(".skill-bar").forEach((el) => skillIO.observe(el));
-
   const maxTilt = 10;
   $$(".tilt").forEach((card) => {
     let rect;

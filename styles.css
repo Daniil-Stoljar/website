@@ -219,6 +219,123 @@ body {
   background: rgba(255, 255, 255, 0.08);
 }
 
+.languages {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.lang-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.45;
+}
+.lang-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.lang-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  padding: 10px 16px;
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+}
+.lang-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.lang-level {
+  font-size: 0.82rem;
+  opacity: 0.6;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.lang-cert {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(255, 111, 97, 0.12);
+  color: var(--primary);
+  opacity: 1;
+}
+
+.timeline {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.timeline-item {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+.timeline-dot {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--primary);
+  margin-top: 6px;
+  box-shadow: 0 0 0 4px rgba(255, 111, 97, 0.2);
+}
+.timeline-body {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+  flex: 1;
+}
+.timeline-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.timeline-header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+.timeline-company {
+  color: var(--primary);
+  font-weight: 600;
+}
+.timeline-date {
+  font-size: 0.82rem;
+  opacity: 0.65;
+  white-space: nowrap;
+}
+.timeline-body p {
+  margin: 0 0 12px;
+  font-size: 0.93rem;
+  opacity: 0.88;
+}
+.timeline-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(255, 111, 97, 0.12);
+  color: var(--primary);
+}
+
 .skills-list {
   display: flex;
   flex-wrap: wrap;
@@ -243,70 +360,29 @@ body {
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.16);
 }
 
-.skill-bars {
-  max-width: 720px;
-  margin: 4px auto 0;
-}
-.skill-bar {
-  position: relative;
+.skill-groups {
   display: flex;
-  align-items: center;
-  height: 36px;
-  border-radius: 18px;
-  margin: 12px 0;
-  overflow: hidden;
-  background: #e6e9f0;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
-  padding-left: 14px;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.skill-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.skill-group-label {
+  font-size: 0.75rem;
   font-weight: 700;
-  color: #141414;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.45;
 }
-.skill-bar span {
-  position: relative;
-  z-index: 2;
-}
-.skill-bar::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  width: var(--width, 0%);
-  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-2) 100%);
-  transition: width 1.6s ease;
-  z-index: 0;
-}
-.skill-bar::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  width: var(--width, 0%);
-  z-index: 1;
-  background: radial-gradient(
-      12px 12px at 20% 30%,
-      rgba(255, 255, 255, 0.45),
-      transparent 60%
-    ),
-    radial-gradient(
-      10px 10px at 60% 60%,
-      rgba(255, 255, 255, 0.35),
-      transparent 60%
-    ),
-    radial-gradient(
-      8px 8px at 30% 70%,
-      rgba(255, 255, 255, 0.3),
-      transparent 60%
-    );
-  mix-blend-mode: screen;
-  opacity: 0.7;
-  animation: bubbles 6s linear infinite;
-  pointer-events: none;
-}
-@keyframes bubbles {
-  0% {
-    background-position: 0% 0%, 0% 0%, 0% 0%;
-  }
-  100% {
-    background-position: 200% 0%, 200% 0%, 200% 0%;
-  }
+.skill-learning {
+  border: 1.5px dashed rgba(255, 111, 97, 0.5) !important;
+  background: transparent !important;
+  color: var(--primary) !important;
 }
 
 .cards {
